@@ -13,5 +13,5 @@ app.use('/auth', authRoutes);
 app.use('/crops', cropRoutes);
 app.use('/offers', offerRoutes);
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000; // Use Render's port or 5000 locally
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
